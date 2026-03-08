@@ -6,8 +6,10 @@ body {
 
 .wrapper {
     min-height: 100vh;
-    padding: 30px;
+    padding: 20px;
     border: 1px solid #aaa;
+    background: white;
+    margin: 10px;
 }
 
 .calc {
@@ -24,56 +26,72 @@ body {
 }
 
 .num {
+    min-width: 120px;
+    font-weight: 500;
     flex: 1;
     height: 38px;
     font-size: 18px;
     padding: 0 12px;
-    border: 2px dashed red;
+    border: 1.5px dashed red;
     border-radius: 10px;
     background: transparent;
     color: red;
+    box-sizing: border-box;
 }
 
 .operation {
+    font-weight: 500;
+    padding: 0 12px;
     width: 80px;
     height: 38px;
     font-size: 26px;
-    border: 2px dashed red;
+    border: 1.5px dashed red;
     border-radius: 10px;
     background: transparent;
     color: red;
-    text-align: center;
+    text-align: left;
+    box-sizing: border-box;
 }
 
 button {
-    margin-top: 15px;
+    margin-top: 30px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-
     height: 38px;
     width: 170px;
-
-    border: 2px dashed red;
+    border: 1.5px dashed red;
     border-radius: 10px;
-
     background: transparent;
     color: red;
     font-size: 16px;
+    font-weight: 700;
+    box-sizing: border-box;
 }
 
 .history {
     margin-top: 25px;
     padding: 15px;
-    border: 2px dashed red;
+    border: 1.5px dashed red;
     border-radius: 12px;
-    min-height: 80px;
-    color:red;
+    height: 80px;
+    overflow-y: hidden;
+    color: red;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-sizing: border-box;
 }
 
 .line {
     font-size: 18px;
-    color:red;
+    color: red;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .old {
@@ -84,6 +102,7 @@ button {
     color: red;
     font-size: 13px;
     margin-top: 5px;
+    font-weight: 700;
 }
 
 .bad {
@@ -93,17 +112,44 @@ button {
 @media (max-width:720px) {
     .row {
         flex-direction: column;
+        gap: 10px;
+        width: 100%;
     }
-
+    
+    .num {
+        width: 100%;
+        min-width: 0;
+        font-size: 20px;
+        margin-bottom: 3px;
+        padding: 3px 12px;
+    }
+    
     .operation {
-        width: 100%;
+        width: 80px;
+        height: 33px;
+        font-size: 20px;
+        padding: 0;
+        text-align: left;
+        padding-left: 10px;
     }
-
+    
     button {
-        width: 100%;
+        width: 80%;
+        font-weight: 700;
+        margin-top: 13px;
+        height: 38px;
     }
-
+    
     .calc {
         max-width: 220px;
+    }
+    
+    .history {
+        height: 90px;
+        padding: 20px;
+    }
+    
+    .line {
+        font-size: 18px;
     }
 }

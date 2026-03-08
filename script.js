@@ -66,12 +66,14 @@ function calc() {
 function draw() {
     log.innerHTML = ""
 
-    history.forEach((e, i) => {
+    const lastTwo = history.slice(-2)
+    
+    lastTwo.forEach((e, i) => {
         let div = document.createElement("div")
         div.textContent = e
         div.className = "line"
 
-        if (i < history.length - 1)
+        if (i < lastTwo.length - 1)
             div.classList.add("old")
 
         log.appendChild(div)
