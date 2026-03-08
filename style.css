@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #d9d9d9;
+}
+
+.wrapper {
+    min-height: 100vh;
+    padding: 30px;
+    border: 1px solid #aaa;
+}
+
+.calc {
+    background: #b9f1b9;
+    max-width: 620px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.num {
+    flex: 1;
+    height: 38px;
+    font-size: 18px;
+    padding: 0 12px;
+    border: 2px dashed red;
+    border-radius: 10px;
+    background: transparent;
+    color: red;
+}
+
+.operation {
+    width: 80px;
+    height: 38px;
+    font-size: 26px;
+    border: 2px dashed red;
+    border-radius: 10px;
+    background: transparent;
+    color: red;
+    text-align: center;
+}
+
+button {
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 38px;
+    width: 170px;
+
+    border: 2px dashed red;
+    border-radius: 10px;
+
+    background: transparent;
+    color: red;
+    font-size: 16px;
+}
+
+.history {
+    margin-top: 25px;
+    padding: 15px;
+    border: 2px dashed red;
+    border-radius: 12px;
+    min-height: 80px;
+}
+
+.line {
+    font-size: 18px;
+}
+
+.old {
+    opacity: 0.4;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.bad {
+    background: hsl(0, 100%, 93%);
+}
+
+@media (max-width:600px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .operation {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .calc {
+        max-width: 220px;
+    }
+}
